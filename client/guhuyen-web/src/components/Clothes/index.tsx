@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import ReactBnbGallery from 'react-bnb-gallery'
 
 import clothes1 from '../../images/Clothes1.jpg'
@@ -12,54 +12,47 @@ import clothes8 from '../../images/Clothes8.jpg'
 import './CSS/index.css'
 
 interface OBJ {
-    photos:any[],
-    galleryOpened:boolean,
-    arguments: any [],
-   
+    photos: any[],
+    galleryOpened: boolean,
+    arguments: any[],
+
 }
 
 
 const photos = [
     {
-    photo: "../../images/Clothes1.jpg",
-    caption: "Viñales, Pinar del Río, Cuba",
-    subcaption: "Photo by Simon Matzinger on Unsplash",
-    thumbnail: "../../images/Clothes5.jpg",
-  }, 
-  {
-    photo: "../../images/Clothes2.jpg",
-    caption: "La Habana, Cuba",
-    subcaption: "Photo by Gerardo Sanchez on Unsplash",
-    thumbnail: "../../images/Clothes6.jpg",
-  }, {
-    photo: "../../images/Clothes3.jpg",
-    caption: "Woman smoking a tobacco",
-    subcaption: "Photo by Hannah Cauhepe on Unsplash",
-    thumbnail: "../../images/Clothes7.jpg",
-  },
-  {
-    photo: "../../images/Clothes4.jpg",
-    caption: "Woman smoking a tobacco",
-    subcaption: "Photo by Hannah Cauhepe on Unsplash",
-    thumbnail: "../../images/Clothes8.jpg",
-  }
+        photo: "../../images/Clothes1.jpg",
+        caption: "Viñales, Pinar del Río, Cuba",
+        subcaption: "Photo by Simon Matzinger on Unsplash",
+        thumbnail: "../../images/Clothes5.jpg",
+    },
+    {
+        photo: "../../images/Clothes2.jpg",
+        caption: "La Habana, Cuba",
+        subcaption: "Photo by Gerardo Sanchez on Unsplash",
+        thumbnail: "../../images/Clothes6.jpg",
+    }, {
+        photo: "../../images/Clothes3.jpg",
+        caption: "Woman smoking a tobacco",
+        subcaption: "Photo by Hannah Cauhepe on Unsplash",
+        thumbnail: "../../images/Clothes7.jpg",
+    },
+    {
+        photo: "../../images/Clothes4.jpg",
+        caption: "Woman smoking a tobacco",
+        subcaption: "Photo by Hannah Cauhepe on Unsplash",
+        thumbnail: "../../images/Clothes8.jpg",
+    }
 ];
 
- class Clothes extends Component<OBJ> {
-    constructor() {
-        super(...arguments);
-        this.state = { galleryOpened: false };
-        this.toggleGallery = this.toggleGallery.bind(this);
-      }
-    
-      toggleGallery() {
-        this.setState(prevState => ({
-          galleryOpened: !prevState.galleryOpened
-        }));
-      }
-    render() {
-        return (
-            <div className="container clothes">
+const Clothes = ({ }: OBJ) => {
+    const [galleryOpened, setGalleryOpened] = useState(false);
+
+    const toggleGallery = () => {
+        setGalleryOpened(!galleryOpened)
+    }
+    return (
+        <div className="container clothes">
             <div className="text-center mx-auto">
                 <h3>Sản phẩm nổi bật</h3>
                 <p>Các sản phẩm nổi bật theo từng loại sản phẩm</p>
@@ -82,7 +75,7 @@ const photos = [
                             <div className="dressImg">
                                 <img src={clothes1} />
                             </div>
-                            <div className="dressText">                              
+                            <div className="dressText">
                                 <h5>ĐẦM TWEED CỔ VUÔNG</h5>
                                 <p>Liên hệ</p>
                             </div>
@@ -91,7 +84,7 @@ const photos = [
                             <div className="dressImg">
                                 <img src={clothes2} />
                             </div>
-                            
+
                             <div className="dressText">
                                 <h5>ĐẦM REN DÁNG SUÔNG</h5>
                                 <p>Liên hệ</p>
@@ -123,16 +116,15 @@ const photos = [
 
 
             <h3>Test</h3>
-            <button onClick={this.toggleGallery}>Open photo gallery</button>
-         <ReactBnbGallery
-        show={this.state.galleryOpened}
-        photos={photos}
-        onClose={this.toggleGallery} />
+            <button onClick={toggleGallery}>Open photo gallery</button>
+            <ReactBnbGallery
+                show={galleryOpened}
+                photos={photos}
+                onClose={toggleGallery} />
     )
-           
+
         </div>
-        )
-    }
+    )
 }
 
 
