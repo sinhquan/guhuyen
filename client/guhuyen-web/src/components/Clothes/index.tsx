@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import ReactBnbGallery from 'react-bnb-gallery'
+import Carousel from '../../../node_modules/react-bootstrap/Carousel'
 
 import clothes1 from '../../images/Clothes1.jpg'
 import clothes2 from '../../images/Clothes2.jpg'
 import clothes3 from '../../images/Clothes3.jpg'
 import clothes4 from '../../images/Clothes4.jpg'
-import clothes5 from '../../images/Clothes5.jpg'
-import clothes6 from '../../images/Clothes6.jpg'
-import clothes7 from '../../images/Clothes7.jpg'
-import clothes8 from '../../images/Clothes8.jpg'
+
 import './CSS/index.css'
 
 interface OBJ {
@@ -19,31 +17,23 @@ interface OBJ {
 }
 
 
-const photos = [
-    {
-        photo: "../../images/Clothes1.jpg",
-        caption: "Viñales, Pinar del Río, Cuba",
-        subcaption: "Photo by Simon Matzinger on Unsplash",
-        thumbnail: "../../images/Clothes5.jpg",
-    },
-    {
-        photo: "../../images/Clothes2.jpg",
-        caption: "La Habana, Cuba",
-        subcaption: "Photo by Gerardo Sanchez on Unsplash",
-        thumbnail: "../../images/Clothes6.jpg",
-    }, {
-        photo: "../../images/Clothes3.jpg",
-        caption: "Woman smoking a tobacco",
-        subcaption: "Photo by Hannah Cauhepe on Unsplash",
-        thumbnail: "../../images/Clothes7.jpg",
-    },
-    {
-        photo: "../../images/Clothes4.jpg",
-        caption: "Woman smoking a tobacco",
-        subcaption: "Photo by Hannah Cauhepe on Unsplash",
-        thumbnail: "../../images/Clothes8.jpg",
-    }
-];
+const photos = [{
+  photo: "https://source.unsplash.com/aZjw7xI3QAA/1144x763",
+  caption: "Viñales, Pinar del Río, Cuba",
+  subcaption: "Photo by Simon Matzinger on Unsplash",
+  thumbnail: "https://source.unsplash.com/aZjw7xI3QAA/100x67",
+}, {
+  photo: "https://source.unsplash.com/c77MgFOt7e0/1144x763",
+  caption: "La Habana, Cuba",
+  subcaption: "Photo by Gerardo Sanchez on Unsplash",
+  thumbnail: "https://source.unsplash.com/c77MgFOt7e0/100x67",
+}, {
+  photo: "https://source.unsplash.com/QdBHnkBdu4g/1144x763",
+  caption: "Woman smoking a tobacco",
+  subcaption: "Photo by Hannah Cauhepe on Unsplash",
+  thumbnail: "https://source.unsplash.com/QdBHnkBdu4g/100x67",
+}];
+
 
 const Clothes = ({ }: OBJ) => {
     const [galleryOpened, setGalleryOpened] = useState(false);
@@ -73,7 +63,17 @@ const Clothes = ({ }: OBJ) => {
                     <div className="dreessTab row">
                         <div className="col-xl-3 dreessItem">
                             <div className="dressImg">
-                                <img src={clothes1} />
+                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                    <Carousel.Item interval={3000} >
+                                        <img src={clothes1} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes2} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes3} />
+                                    </Carousel.Item>
+                                </Carousel>
                             </div>
                             <div className="dressText">
                                 <h5>ĐẦM TWEED CỔ VUÔNG</h5>
@@ -82,7 +82,17 @@ const Clothes = ({ }: OBJ) => {
                         </div>
                         <div className="col-xl-3 dreessItem">
                             <div className="dressImg">
-                                <img src={clothes2} />
+                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                    <Carousel.Item interval={3000} >
+                                        <img src={clothes2} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes3} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes4} />
+                                    </Carousel.Item>
+                                </Carousel>
                             </div>
 
                             <div className="dressText">
@@ -92,7 +102,17 @@ const Clothes = ({ }: OBJ) => {
                         </div>
                         <div className="col-xl-3 dreessItem">
                             <div className="dressImg">
-                                <img src={clothes3} />
+                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                    <Carousel.Item interval={3000} >
+                                        <img src={clothes3} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes4} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes1} />
+                                    </Carousel.Item>
+                                </Carousel>
                             </div>
                             <div className="dressText">
                                 <h5>ÁO KHOÁC HỌA TIẾT GHI TÍM</h5>
@@ -101,7 +121,17 @@ const Clothes = ({ }: OBJ) => {
                         </div>
                         <div className="col-xl-3 dreessItem">
                             <div className="dressImg">
-                                <img src={clothes4} />
+                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                    <Carousel.Item interval={3000} >
+                                        <img src={clothes4} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes3} />
+                                    </Carousel.Item>
+                                    <Carousel.Item interval={3000}>
+                                        <img src={clothes1} />
+                                    </Carousel.Item>
+                                </Carousel>
                             </div>
                             <div className="dressText">
                                 <h5>ZUÝP CHỮ A CẠP CHUN</h5>
@@ -115,12 +145,12 @@ const Clothes = ({ }: OBJ) => {
             </div>
 
 
-            <h3>Test</h3>
+            {/* <h3>Test</h3>
             <button onClick={toggleGallery}>Open photo gallery</button>
             <ReactBnbGallery
                 show={galleryOpened}
                 photos={photos}
-                onClose={toggleGallery} />
+                onClose={toggleGallery} /> */}
     )
 
         </div>

@@ -1,41 +1,39 @@
 import React from 'react'
-import Carousel from '../../../node_modules/react-bootstrap/Carousel'
 import {Link} from 'gatsby'
-import carouselImg1 from '../../images/Carousel1.jpg'
-import carouselImg2 from '../../images/Carousel2.jpg'
-import carouselImg3 from '../../images/Carousel3.jpg'
-import carouselImg4 from '../../images/Carousel4.jpg'
-import carouselImg5 from '../../images/Carousel5.jpg'
+import carousel from '../../images/Carousel.png'
+import Carousel from '../../../node_modules/react-bootstrap/Carousel'
 import '../Carousel/CSS/index.css'
 
 const CarouselImg = () =>{
     return(
-    <div className="container-fluid carouselImg">
-        <Carousel pause={false} indicators={false} touch={false} controls={true}>
-            <Carousel.Item interval={2000}>
-                <img src={carouselImg2} />
-                <Carousel.Caption>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
-                <img src={carouselImg3}  />
-                <Carousel.Caption>
-                </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item interval={2000}>
-                <img src={carouselImg1}/>
-                <Carousel.Caption>
-                </Carousel.Caption>
-            </Carousel.Item>
-        </Carousel>
-
-        <div className="carouselContent row d-flex justify-content-center mt-4">
-            <Link className="carouselItem col-xl-6" to="/">
-                <img src={carouselImg4}/>
-            </Link>
-            <Link className="carouselItem col-xl-6" to="/">
-                <img src={carouselImg5}/>
-            </Link>
+    <div className="container-fluid carouselImg ">
+        <img src={carousel} alt=""/>
+        <div className="carouselContent ">
+            <h1>BlueStack 5</h1>
+            <h2>Nhanh hơn, nhẹ hơn. Thay đổi cuộc chơi</h2>
+            <div className="carouselIcon">
+                <Carousel pause={false} indicators={false} touch={false} controls={false} fade={true}>
+                    <Carousel.Item interval={3000} >
+                        <i className="fa fa-heart"></i>
+                        <h4>HƠN 100 KHÁCH HÀNG</h4>
+                        <p>CẢM THẤY HÀI LÒNG VỚI TRANG PHỤC</p>
+                    </Carousel.Item>
+                    <Carousel.Item interval={3000}>
+                        <i className="fa fa-female"></i>
+                        <h4>HƠN 100 KIỂU QUẦN ÁO</h4>
+                        <p>CÓ TẠI CỬA HÀNG CHÚNG TÔI</p>
+                    </Carousel.Item>
+                    <Carousel.Item interval={3000}>
+                        <i className="fa fa-thumbs-up"></i>
+                        <h4>NHẬN SỬA QUẦN ÁO</h4>
+                        <p>VÀ NHẬN ĐẶT MAY, THEO YÊU CẦU</p>
+                    </Carousel.Item>
+                </Carousel>
+                <div className="carouselLink">
+                    <Link to="#" className="btn btn-success py-3 mt-3">Click Để Xem Những Sản Phẩm Khác</Link>
+                </div>
+            </div>
+            
         </div>
     </div>
     )
