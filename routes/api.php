@@ -17,8 +17,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register', 'Auth\AuthController@createUser');
-
-Route::get('/login', function (Request $request) {
-    return 'aaaa';
+Route::post('login', 'api\UserController@login');
+Route::post('register', 'api\UserController@register');
+Route::group(['middleware' => 'auth:api'], function() {
+    Route::get('me', 'api\UserController@me');
+    Route::delete('logout', 'api\UserController@logout');
 });
+
