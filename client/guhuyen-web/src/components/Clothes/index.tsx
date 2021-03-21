@@ -9,40 +9,10 @@ import clothes4 from '../../images/Clothes4.jpg'
 
 import './CSS/index.css'
 
-interface OBJ {
-    photos: any[],
-    galleryOpened: boolean,
-    arguments: any[],
 
-}
-
-
-const photos = [{
-  photo: "https://source.unsplash.com/aZjw7xI3QAA/1144x763",
-  caption: "Viñales, Pinar del Río, Cuba",
-  subcaption: "Photo by Simon Matzinger on Unsplash",
-  thumbnail: "https://source.unsplash.com/aZjw7xI3QAA/100x67",
-}, {
-  photo: "https://source.unsplash.com/c77MgFOt7e0/1144x763",
-  caption: "La Habana, Cuba",
-  subcaption: "Photo by Gerardo Sanchez on Unsplash",
-  thumbnail: "https://source.unsplash.com/c77MgFOt7e0/100x67",
-}, {
-  photo: "https://source.unsplash.com/QdBHnkBdu4g/1144x763",
-  caption: "Woman smoking a tobacco",
-  subcaption: "Photo by Hannah Cauhepe on Unsplash",
-  thumbnail: "https://source.unsplash.com/QdBHnkBdu4g/100x67",
-}];
-
-
-const Clothes = ({ }: OBJ) => {
-    const [galleryOpened, setGalleryOpened] = useState(false);
-
-    const toggleGallery = () => {
-        setGalleryOpened(!galleryOpened)
-    }
+const Clothes = () => {
     return (
-        <div className="container clothes">
+        <div className="container clothes" id="clothes">
             <div className="text-center mx-auto">
                 <h3>Sản phẩm nổi bật</h3>
                 <p>Các sản phẩm nổi bật theo từng loại sản phẩm</p>
@@ -61,9 +31,9 @@ const Clothes = ({ }: OBJ) => {
             <div className="tab-content" id="myTabContent">
                 <div className="tab-pane fade show active" id="home" role="tabpanel row" aria-labelledby="home-tab">
                     <div className="dreessTab row">
-                        <div className="col-xl-3 dreessItem">
+                        <div className="col-lg-3 col-md-6 dreessItem">
                             <div className="dressImg">
-                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                <Carousel pause={false} indicators={false} touch={false} controls={true} >
                                     <Carousel.Item interval={3000} >
                                         <img src={clothes1} />
                                     </Carousel.Item>
@@ -80,9 +50,9 @@ const Clothes = ({ }: OBJ) => {
                                 <p>Liên hệ</p>
                             </div>
                         </div>
-                        <div className="col-xl-3 dreessItem">
+                        <div className="col-lg-3 col-md-6  dreessItem">
                             <div className="dressImg">
-                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                <Carousel pause={false} indicators={false} touch={false} controls={true} >
                                     <Carousel.Item interval={3000} >
                                         <img src={clothes2} />
                                     </Carousel.Item>
@@ -100,9 +70,9 @@ const Clothes = ({ }: OBJ) => {
                                 <p>Liên hệ</p>
                             </div>
                         </div>
-                        <div className="col-xl-3 dreessItem">
+                        <div className="col-lg-3 col-md-6  dreessItem">
                             <div className="dressImg">
-                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                <Carousel pause={false} indicators={false} touch={false} controls={true} >
                                     <Carousel.Item interval={3000} >
                                         <img src={clothes3} />
                                     </Carousel.Item>
@@ -119,9 +89,9 @@ const Clothes = ({ }: OBJ) => {
                                 <p>Liên hệ</p>
                             </div>
                         </div>
-                        <div className="col-xl-3 dreessItem">
+                        <div className="col-lg-3 col-md-6 dreessItem">
                             <div className="dressImg">
-                                <Carousel pause={false} indicators={false} touch={false} controls={false} >
+                                <Carousel pause={false} indicators={false} touch={false} controls={true} >
                                     <Carousel.Item interval={3000} >
                                         <img src={clothes4} />
                                     </Carousel.Item>
@@ -143,16 +113,6 @@ const Clothes = ({ }: OBJ) => {
                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">456</div>
                 <div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">789</div>
             </div>
-
-
-            {/* <h3>Test</h3>
-            <button onClick={toggleGallery}>Open photo gallery</button>
-            <ReactBnbGallery
-                show={galleryOpened}
-                photos={photos}
-                onClose={toggleGallery} /> */}
-    )
-
         </div>
     )
 }

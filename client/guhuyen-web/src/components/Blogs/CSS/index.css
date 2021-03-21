@@ -1,0 +1,37 @@
+.blogs h2{
+    text-align: center;
+    padding: 50px 0;
+}
+.blogs .blogsContent .blogsItem{
+    margin: 20px 0;
+    transition: all linear 0.3s;
+}
+.blogs .blogsContent .blogsItem:hover{
+    box-shadow: 2px 0px 15px 5px rgb(146 141 141);
+}
+.blogs .blogsContent .blogsItem .blogImg img{
+    width: 100%;
+    height: 250px;
+    padding: 20px 0;
+}
+.blogs .blogsContent .blogsItem .blogText{
+    height: 270px;
+}
+.blogs .blogsContent .blogsItem .blogText h4{
+    margin-top: 10px;
+    text-align: center;
+    height: 60px;
+}
+.blogs .blogsContent .blogsItem .blogText .textP{
+    height: 160px;
+}
+@media screen and (max-width: 900px) and (min-width: 768px){
+.blogs .blogsContent .blogsItem .blogImg img{
+    width: 100%;
+    height: 100%;
+    padding: 20px 0;
+}
+.blogs .blogsContent .blogsItem .blogText{
+    text-align: center;
+}
+}

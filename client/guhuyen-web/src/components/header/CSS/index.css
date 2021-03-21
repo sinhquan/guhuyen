@@ -1,33 +1,28 @@
-/* Logo */
 .logo img{
   max-width: 134px;
   height: 38px;
   width: auto;
 }
-/* menu */
 .navbar-light .navbar-nav .nav-link {
   color: white !important;
   font-weight: 800;
 }
-/* search */
 .search ::placeholder { 
   color: #7a7d81;
   font-size: 16px;
   font-style: italic;
 }
-
 .search input:focus{
   box-shadow: none;
   border:  1px solid #ced4da;
 }
-
  .scrolled{
   position: fixed;
   top: 0;
   left: 0;
   background-color: #1f2640;
 }
- .Navbar{
+.Navbar{
   width: 100%;
   max-width: 100%;
   min-height: 6vh;
@@ -35,8 +30,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #eee; */
   transition: all .2s ease;
   position: fixed;
   z-index: 9999;
+  padding: 50px 0;
 }

@@ -1,0 +1,33 @@
+footer{
+    background-color: #1F2640;
+    padding: 100px 0;
+    margin-top: 50px;
+}
+footer .footerContent .footerItem{
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 700;
+    opacity: .85;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0
+}
+footer .footerContent .footerItem p a{
+    font-size: 14px;
+    color: #fff;
+    line-height: 24px;
+    font-weight: 700;
+    opacity: .85;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 0
+}
+footer .footerContent .footerItem p svg{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+footer .footerContent .footerItem .form-control:focus {
+    border-color: none;
+    box-shadow: none;
+}
