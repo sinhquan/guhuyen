@@ -15,18 +15,16 @@ import '../pages/CSS/index.css'
 import Header from "../components/header/index"
 import CarouselImg from "../components/Carousel"
 import Clothes from "../components/Clothes"
-import Collection from "../components/Collection"
 import Blogs from "../components/Blogs"
 import Footer from "../components/Footer"
 
 
 const IndexPage = () => (
   <Layout>
-    <SEO title="Home" />
+    <SEO title="Trang chủ" />
     <Header />
     <CarouselImg />
     <Clothes />
-    <Collection />
     <Blogs />
     <Footer />
   </Layout>

@@ -1,49 +1,18 @@
-.clothes{margin-top: 50px;}
-.clothes .nav-tabs{
-    border: none;
-    border-bottom: none;
-    margin-top: 30px;
-    margin-bottom:30px;
+.clothes{
+    margin-top: 50px;
 }
-.clothes .nav-tabs .nav-link {
-    border:none;
-}
-.clothes .nav-tabs .nav-item .nav-link{
-    font-weight: 700;
-    font-size: 250x;
-    height: 60px;   
-}
-.clothes .nav-tabs .nav-item .nav-link:focus{
-    font-weight: 700;
-    font-size: 20px;
-    border: 3px solid red;
-    height: 60px;
-}
-.clothes .nav-tabs .nav-item .active{
-    font-weight: 700;
-    font-size: 20px;
-    border: 2px solid red;
-    height: 60px;
-}
-.clothes .tab-content .dreessTab .dreessItem .dressImg img{
-    width: 100%;
-}
-.dreessTab .dreessItem .dressText{
-    text-align: center;
-    padding-top: 18px;
-}
-.dreessTab .dreessItem .dressText h5{
-    font-size: 14px;
+.clothes .section-title{
     font-weight: 800;
+    font-size: 30px;
 }
-.dreessTab .dreessItem .dressImages{
-    display: flex;
-    justify-content: space-around;
+.clothes .clothesContent .clothesImg .clothesItem{
+    margin: 50px 0;
+}
+.clothes .clothesContent .clothesImg .clothesItem .clothesCover img{
     width: 100%;
 }
-.dreessTab .dreessItem .dressImages img{
-    width: 50%;
-    margin: 5px 2px;
+.carousel-item-next, .carousel-item-prev, .carousel-item.active{
+    display: flex;
 }
 @media screen and (max-width: 1100px) and (min-width: 768px){
     

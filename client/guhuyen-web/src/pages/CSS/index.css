@@ -3,6 +3,7 @@ body{
   font-family: 'Shippori Mincho', serif !important;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 body h1,body h2,body h3,body h4,body h5{
   font-family: 'Shippori Mincho', serif !important;
