@@ -15,6 +15,8 @@ import '../pages/CSS/index.css'
 import Header from "../components/header/index"
 import CarouselImg from "../components/Carousel"
 import Clothes from "../components/Clothes"
+import OfficeClothes from "../components/OfficeClothes"
+import DressClothes from "../components/DressClothes"
 import Blogs from "../components/Blogs"
 import Footer from "../components/Footer"
 
@@ -25,6 +27,8 @@ const IndexPage = () => (
     <Header />
     <CarouselImg />
     <Clothes />
+    <OfficeClothes />
+    <DressClothes />
     <Blogs />
     <Footer />
   </Layout>

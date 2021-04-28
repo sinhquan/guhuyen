@@ -1,218 +1,181 @@
 import React, { useState } from 'react'
-import ReactBnbGallery from 'react-bnb-gallery'
-import Carousel from '../../../node_modules/react-bootstrap/Carousel'
+
 
 import clothes1 from '../../images/Clothes1.jpg'
 import clothes2 from '../../images/Clothes2.jpg'
 import clothes3 from '../../images/Clothes3.jpg'
 import clothes4 from '../../images/Clothes4.jpg'
+import lady1 from '../../images/lady-portrait.jpg'
+import lady2 from '../..//images/lay-portrait1.mp4'
+
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+
 
 import './CSS/index.css'
 
 
 const Clothes = () => {
+    const options = {
+        margin: 20,
+        responsiveClass: true,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        navText: ["Prev", "Next"],
+        smartSpeed: 1000,
+        loop:true,
+        responsive: {
+            0: {
+                items: 1,
+            },
+            400: {
+                items: 1,
+            },
+            600: {
+                items: 2,
+            },
+            700: {
+                items: 3,
+            },
+            1000: {
+                items: 5,
+    
+            }
+        },
+    };
+
     return (
         <div className="container clothes" id="clothes">
-            <div className="text-center mx-auto ">
-                <h3 className="section-title">Sản phẩm mới nhất</h3>
-            </div>
-            <div className="clothesContent">
-                    <div className="clothesImg">
-                    <div className="clothesItem">
-                            <Carousel pause={false} indicators={false} touch={false} controls={true} >
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                        <p></p>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                
-                            </Carousel>
+            <h2>ĐẦM VÁY BÁN CHẠY NHẤT</h2>
+            <OwlCarousel className="owl-theme" {...options} >
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes1} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
                         </div>
-                    </div>
-            </div>
-            <div className="text-center mx-auto">
-                <h3 className="section-title">Đầm váy</h3>
-            </div>
-            <div className="clothesContent">
-                    <div className="clothesImg">
-                        <div className="clothesItem">
-                            <Carousel pause={false} indicators={false} touch={false} controls={true} >
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                        <p></p>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                
-                            </Carousel>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes2} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
                         </div>
-                    </div>
-            </div>
-            <div className="text-center mx-auto">
-                <h3 className="section-title">Đồ công sở</h3>
-            </div>
-            <div className="clothesContent">
-                    <div className="clothesImg">
-                    <div className="clothesItem">
-                            <Carousel pause={false} indicators={false} touch={false} controls={true} >
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes1} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes2} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                <Carousel.Item interval={4500} className="row ml-0 mr-0" >
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img  src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                        <p></p>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                    <div className="col-lg-3 col-sm-6 col-xs-12 clothesCover">
-                                        <img src={clothes3} />
-                                        <h3>Đầm chữ A</h3>
-                                    </div>
-                                </Carousel.Item>
-                                
-                            </Carousel>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes3} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
                         </div>
-                    </div>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes4} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes1} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes2} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+                <div className="clothes-item">
+                    <a className="clothes-img">
+                        <img src={clothes3} />
+                        <div className="clothes-icon">
+                            <div className="icon-item icon-item1">                                    
+                                <button><i className="fa fa-search" /></button>
+                            </div>
+                            <div className="icon-item icon-item2">                                    
+                                <button><p>MUA NGAY</p></button>
+                            </div>
+                            <div className="icon-item icon-item3">
+                                <button><i className="fa fa-shopping-bag" /></button>                                   
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </OwlCarousel>
+            <div className="laydy-portrait container-fluid row">
+                <div className="laydy-portrait-item col-md-6">
+                    <a href="#"><img src={lady1}/></a>   
+                </div>
+                <div className="laydy-portrait-item col-md-6">
+                    <a href="#"><video src={lady2} autoPlay loop muted /></a>
+                </div>
             </div>
         </div>
     )

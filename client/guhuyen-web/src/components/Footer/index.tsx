@@ -8,13 +8,13 @@ const Footer = () =>{
         <footer className="container-fluid">
             <div className="footerContent row">
                 <div className="footerItem col-lg-3 col-md-6">
-                    <h4>NHÀ MAY GUHUYEN</h4>
+                    <h4 style={{color:"#fff"}}>NHÀ MAY GUHUYEN</h4>
                     <p>Địa chỉ: Số 9 liên khu 4- 5, Phường Bình Hưng Hòa, Quận Bình Tân TPHCM</p>
                     <p>Điện thoại: 0389139723</p>
                     <p>Email: thoitrangm2@m2.com.vn</p>
                 </div>
                 <div className="footerItem col-lg-3 col-md-6">
-                    <h4>DANH MỤC SẢN PHẨM</h4>
+                    <h4 style={{color:"#fff"}}>DANH MỤC SẢN PHẨM</h4>
                     <p><Link to="#clothes">Đầm</Link></p>
                     <p><Link to="#clothes">Váy</Link></p>
                     <p><Link to="#clothes">Đồ công sở</Link></p>
@@ -22,7 +22,7 @@ const Footer = () =>{
                     <p><Link to="#blogs">Tin tức</Link></p>
                 </div>
                 <div className="footerItem col-lg-3 col-md-6">
-                    <h4>MẠNG XÃ HỘI</h4>
+                    <h4 style={{color:"#fff"}}>MẠNG XÃ HỘI</h4>
                     <p>
                         <Link to="">
                             <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" className="bi bi-facebook" viewBox="0 0 30 30">
@@ -42,7 +42,7 @@ const Footer = () =>{
                     </p>
                 </div>
                 <div className="footerItem col-lg-3 col-md-6">
-                    <h4>ĐĂNG KÍ NHẬN TIN</h4>
+                    <h4 style={{color:"#fff"}}>ĐĂNG KÍ NHẬN TIN</h4>
                     <p>
                         Hàng tháng May 10 đều có những dịch vụ và sản phẩm mới ra mắt nhằm phục vụ 
                         khách hàng tốt hơn. Để có thể cập nhật kịp thời những thông tin này, vui lòng 
