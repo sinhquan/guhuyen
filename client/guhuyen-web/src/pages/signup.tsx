@@ -1,11 +1,10 @@
 import React from "react"
 import { Form, Input, Button } from 'antd';
 import 'antd/dist/antd.css';
-import Header from "../components/header/index"
-import Carousel from "../components/Carousel"
-import Footer from "../components/Footer"
 import { useForm } from "react-hook-form";
 import './CSS/SignUp.css'
+import Layout from "../components/layout";
+import SEO from "../components/seo"
 
 
 
@@ -36,8 +35,8 @@ const SignUp = () =>{
     
     return(
         <div>
-             <Header />
-             <Carousel />
+          <Layout>
+            <SEO title="Đăng Kí" />
              <div className="sign-up container mx-auto">
                 <h1>Tạo Tài Khoản</h1>
                 <Form {...layout} name="nest-messages" onFinish={onFinish} validateMessages={validateMessages}>
@@ -58,7 +57,7 @@ const SignUp = () =>{
                     </Form.Item>
                 </Form>
              </div>
-            <Footer />
+          </Layout>
         </div>
     )
 }

@@ -1,11 +1,7 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
 import React, { ReactNode } from "react"
+import Header from "../components/header/index"
+import Footer from "../components/Footer"
+import  Carousel  from "../components/Carousel"
 // import "./layout.css"
 
 interface Props {
@@ -13,13 +9,13 @@ interface Props {
 }
 
 const Layout = ({ children } : Props) => {
-
   return (
-    <>    
-      <div>     
-        <main>{children}</main>        
+      <div>
+        <Header />
+        <Carousel />
+        <main>{children}</main>
+        <Footer />   
       </div>
-    </>
   )
 }
 
